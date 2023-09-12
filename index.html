@@ -150,32 +150,32 @@
               let elapsedTime = Math.round((endTime - startTime) / 10) / 100; // Convert to seconds with 2 decimal places
 
               if (response.typeiid === 1) {
-                btnText.text("Get information");
+                btnText.text("Get confirmation ID");
                 getcid.val(response.short_result);
                 timerElement.text(`Speed: ${elapsedTime}(sec)`);
                 toastr.success(response.result);
               } else if (response.typeiid === 4) {
-                btnText.text("Get information");
+                btnText.text("Get confirmation ID");
                 getcid.val(response.short_result);
                 timerElement.text(`Speed: ${elapsedTime}(sec)`);
               } else if (response.typeiid === 11) {
-                btnText.text("Get information");
+                btnText.text("Get confirmation ID");
                 getcid.val(response.result);
                 timerElement.text(`Speed: ${elapsedTime}(sec)`);
               } else {
-                btnText.text("Get information");
+                btnText.text("Get confirmation ID");
                 getcid.val("no attacking!");
                 timerElement.text(`Speed: ${elapsedTime}(sec)`);
               }
               console.log(response);
             })
             .catch(function () {
-              btnText.text("Get information");
+              btnText.text("Get confirmation ID");
               // Handle empty string alert
               toastr.error("Error While getting data! Please try again later.");
             });
         } else {
-
+          btnText.text("Get confirmation ID");
           $("#cid").focus();
           // Handle empty string alert
           toastr.error("Please enter your installation ID");
@@ -201,7 +201,7 @@
         fetchData();
       });
       $("#btnCopy").on("click", function () {
-        // Call the copyCID function
+        // Call the copyCID
         copyCID();
       });
     </script>
